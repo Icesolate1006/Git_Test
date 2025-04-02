@@ -134,3 +134,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Allow all file uploads for development (disable in production)
 DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+
+# Email settings (example using Gmail SMTP)
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'your_email@gmail.com'         # your email
+EMAIL_HOST_PASSWORD = 'your_app_password'        # app password or real password (use env vars ideally)
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
